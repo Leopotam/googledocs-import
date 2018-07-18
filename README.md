@@ -1,5 +1,5 @@
 # GoogleDocs Data Downloader
-Downloader of google docs sheets in csv format with optional converting it to json.
+[Downloader of google docs sheets in csv format with optional converting it to json](https://github.com/Leopotam/googledocs-import).
 
 ## How to use
 * Open `Window` / `Leopotam` / `GoogleDocs Downloader` window.
