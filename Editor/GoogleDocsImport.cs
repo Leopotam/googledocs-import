@@ -1,6 +1,6 @@
 // ----------------------------------------------------------------------------
 // The MIT License
-// LeopotamGroupLibrary https://github.com/Leopotam/googledocs-import
+// Leopotam.GoogleDocs.Import https://github.com/Leopotam/googledocs-import
 // Copyright (c) 2018 Leopotam <leopotam@gmail.com>
 // ----------------------------------------------------------------------------
 
