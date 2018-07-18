@@ -1,0 +1,10 @@
+{
+    "name": "Leopotam.GoogleDocs.Import.Editor",
+    "references": [],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}
