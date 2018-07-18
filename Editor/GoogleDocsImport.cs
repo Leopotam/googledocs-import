@@ -22,8 +22,8 @@ namespace Leopotam.GoogleDocs.Import.UnityEditors {
         const string Title = "GoogleDocs Downloader";
         const string UrlDefault = "http://localhost";
         const string ResDefault = "NewCsv.csv";
-        static readonly Regex CsvMultilineRegex = new Regex ("\"([^\"]|\"\"|\\n)*\"");
-        static readonly Regex _csvRegex = new Regex ("(?<=^|,)(\"(?:[^\"]|\"\")*\"|[^,]*)");
+        static readonly Regex CsvMultilineFixRegex = new Regex ("\"([^\"]|\"\"|\\n)*\"");
+        static readonly Regex CsvParseRegex = new Regex ("(?<=^|,)(\"(?:[^\"]|\"\")*\"|[^,]*)");
         static readonly List<string> _csvBuffer = new List<string> (32);
         List<RecordInfo> _items;
         Vector2 _scrollPos;
@@ -258,7 +258,7 @@ namespace Leopotam.GoogleDocs.Import.UnityEditors {
 
         static void ParseCsvLine (string data) {
             _csvBuffer.Clear ();
-            foreach (Match m in _csvRegex.Matches (data)) {
+            foreach (Match m in CsvParseRegex.Matches (data)) {
                 var part = m.Value.Trim ();
                 if (part.Length > 0) {
                     if (part[0] == '"' && part[part.Length - 1] == '"') {
@@ -338,7 +338,7 @@ namespace Leopotam.GoogleDocs.Import.UnityEditors {
                                 Directory.CreateDirectory (folder);
                             }
                             // fix for multiline string.
-                            data = CsvMultilineRegex.Replace (data, m => m.Value.Replace ("\n", "\\n"));
+                            data = CsvMultilineFixRegex.Replace (data, m => m.Value.Replace ("\n", "\\n"));
                             // json generation.
                             switch (item.Mode) {
                                 case JsonMode.Array:
