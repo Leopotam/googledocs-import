@@ -47,7 +47,7 @@ namespace Leopotam.GoogleDocs.Import.UnityEditors {
 
         void OnGUI () {
             if (_items == null) {
-                LoadSettings ();
+                _items = LoadSettings ();
             }
             if (string.IsNullOrEmpty (_newUrl) || string.IsNullOrEmpty (_newAsset)) {
                 _newUrl = UrlDefault;
