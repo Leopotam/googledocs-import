@@ -14,3 +14,11 @@
 * First column can be recognized as keys in JSON mode "To dictionary" (will be excluded from data).
 
 > Tested on unity 2018.2 (dependent on it) and contains assembly definition for compiling to separate assembly file for performance reason.
+
+# License
+The software released under the terms of the [MIT license](./LICENSE). Enjoy.
+
+# Donate
+Its free opensource software, but you can buy me a coffee:
+
+<a href="https://www.buymeacoffee.com/leopotam" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
